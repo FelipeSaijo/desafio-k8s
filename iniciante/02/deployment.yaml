@@ -11,17 +11,17 @@ spec:
       labels:
         app: nginx
     spec:
-      # nodeSelector:
-      #   name: nginx
+      nodeSelector:
+        name: nginx
       containers:
       - name: nginx
         image: nginx
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
-        #   requests:
-        #     memory: "200Mi"
-        #     cpu: "700m"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "200Mi"
+            cpu: "700m"
         ports:
         - containerPort: 80
